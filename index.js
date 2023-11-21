@@ -7,7 +7,7 @@ function checkAgeValidity() {
    const month = dobDate.getMonth();
    const day = dobDate.getDate();
    let age = today.getFullYear() - dobDate.getFullYear();
-
+   
    let checkmonth = today.getMonth() < month
    let checkday = today.getMonth() === month && today.getDate() < day;
     
@@ -25,8 +25,9 @@ function checkAgeValidity() {
      dobElement.setCustomValidity("");
    }
  }
+ 
 
-et userform = document.getElementById("user-form");
+let userform = document.getElementById("user-form");
 
 const EntriesRetrieved = ()=> {
    let entries = localStorage.getItem("user-entries");
