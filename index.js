@@ -25,3 +25,17 @@ function checkAgeValidity() {
      dobElement.setCustomValidity("");
    }
  }
+
+et userform = document.getElementById("user-form");
+
+const EntriesRetrieved = ()=> {
+   let entries = localStorage.getItem("user-entries");
+   if(entries){
+      entries=JSON.parse(entries);
+   }
+   else{
+      entries=[]
+   }
+   return entries;
+}
+
